@@ -23,3 +23,19 @@ Route::get('/data', function () {
         'description' => 'Developers school'
     ]);
 });
+
+
+Route::get('/json', function () {
+    return view('examples.show_json')->with([
+        'posts' => [
+            [
+                'title' => 'Laravels news',
+                'description' => 'Laravel is a free, open source PHP web framework, created by Taylor Otwell and intended for the development of web applications following the model'
+            ],
+            [
+                'title' => 'Laravels news',
+                'description' => 'Laravel is a free, open source PHP web framework, created by Taylor Otwell and intended for the development of web applications following the model'
+            ]
+        ]
+    ]);
+});
