@@ -5,3 +5,7 @@
 @else
     <p>There is no comment</p>
 @endif
+
+@unless ($comment > 0)
+    <p>Invalid quantity</p>
+@endunless

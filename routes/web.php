@@ -50,7 +50,7 @@ Route::get('/php/comments', function () {
 
 Route::get('/conditionals/if', function () {
     return view('examples.conditionals_if', [
-        'comment' => 10
+        'comment' => -1
     ]);
 });
 
