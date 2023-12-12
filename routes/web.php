@@ -47,3 +47,10 @@ Route::get('/frameworks/js', function () {
 Route::get('/php/comments', function () {
     return view('examples.php_comments');
 });
+
+Route::get('/conditionals/if', function () {
+    return view('examples.conditionals_if', [
+        'comment' => -1
+    ]);
+});
+
