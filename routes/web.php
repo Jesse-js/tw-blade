@@ -39,3 +39,11 @@ Route::get('/json', function () {
         ]
     ]);
 });
+
+Route::get('/frameworks/js', function () {
+    return view('examples.frameworks_js');
+});
+
+Route::get('/php/comments', function () {
+    return view('examples.php_comments');
+});
