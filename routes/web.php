@@ -14,5 +14,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
+});
+
+Route::get('/data', function () {
+    return view('examples.data')->with([
+        'name' => 'Treinaweb',
+        'description' => 'Developers school'
+    ]);
 });
