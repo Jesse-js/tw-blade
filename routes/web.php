@@ -54,3 +54,9 @@ Route::get('/conditionals/if', function () {
     ]);
 });
 
+Route::get('/conditionals/switch/{month}', function (int $month) {
+    return view('examples.conditionals_switch', [
+        'month' => $month
+    ]);
+});
+
