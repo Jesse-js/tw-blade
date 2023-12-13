@@ -1,40 +1,58 @@
-@switch($month)
-    @case(1)
-        <p>January</p>
+@isset($month)
+    @switch($month)
+        @case(1)
+            <p>January</p>
         @break
-    @case(2)
-        <p>February</p>
+
+        @case(2)
+            <p>February</p>
         @break
-    @case(3)
-        <p>March</p>
+
+        @case(3)
+            <p>March</p>
         @break
-    @case(4)
-        <p>April</p>
+
+        @case(4)
+            <p>April</p>
         @break
-    @case(5)
-        <p>May</p>
+
+        @case(5)
+            <p>May</p>
         @break
-    @case(6)
-        <p>June</p>
+
+        @case(6)
+            <p>June</p>
         @break
-    @case(7)
-        <p>July</p>
+
+        @case(7)
+            <p>July</p>
         @break
-    @case(8)
-        <p>August</p>
+
+        @case(8)
+            <p>August</p>
         @break
-    @case(9)
-        <p>September</p>
+
+        @case(9)
+            <p>September</p>
         @break
-    @case(10)
-        <p>October</p>
+
+        @case(10)
+            <p>October</p>
         @break
-    @case(11)
-        <p>November</p>
+
+        @case(11)
+            <p>November</p>
         @break
-    @case(12)
-        <p>December</p>
+
+        @case(12)
+            <p>December</p>
         @break
-    @default
-        <p>Invalid month</p>
-@endswitch
+
+        @default
+            <p>Invalid month</p>
+    @endswitch
+@endisset
+
+@empty($month)
+    <p>No month</p>
+@endempty
