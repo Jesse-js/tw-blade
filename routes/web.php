@@ -17,21 +17,27 @@ Route::get('/', function () {
     return view('index', [
         'projects' => [
             [
+                'active' => true,
                 'image' => 'cabin.png'
             ],
             [
+                'active' => true,
                 'image' => 'cake.png'
             ],
             [
+                'active' => true,
                 'image' => 'circus.png'
             ],
             [
+                'active' => false,
                 'image' => 'game.png'
             ],
             [
+                'active' => true,
                 'image' => 'safe.png'
             ],
             [
+                'active' => true,
                 'image' => 'submarine.png'
             ]
         ]

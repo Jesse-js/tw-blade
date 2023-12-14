@@ -74,6 +74,7 @@
             <!-- Portfolio Grid Items-->
             <div class="row justify-content-center">
                 @forelse ($projects as $project)    
+                    @continue(!$project['active'])
                     <div class="col-md-6 col-lg-4 mb-5">
                         <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal1">
                             <div
