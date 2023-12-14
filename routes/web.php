@@ -14,7 +14,28 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('index');
+    return view('index', [
+        'projects' => [
+            [
+                'image' => 'cabin.png'
+            ],
+            [
+                'image' => 'cake.png'
+            ],
+            [
+                'image' => 'circus.png'
+            ],
+            [
+                'image' => 'game.png'
+            ],
+            [
+                'image' => 'safe.png'
+            ],
+            [
+                'image' => 'submarine.png'
+            ]
+        ]
+    ]);
 });
 
 Route::get('/data', function () {
