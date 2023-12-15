@@ -31,13 +31,28 @@
                 <i class="fas fa-bars"></i>
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
+                @php
+                    $menuItens = [
+                        [
+                            'label' => 'Portfolio',
+                            'url' => '#portfolio',
+                        ],
+                        [
+                            'label' => 'About',
+                            'url' => '#about',
+                        ],
+                        [
+                            'label' => 'Contact',
+                            'url' => '#contact',
+                        ],
+                        [
+                            'label' => 'Start Bootstrap',
+                            'url' => 'https://startbootstrap.com/themes/freelancer/',
+                        ]
+                    ];
+                @endphp
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded"
-                            href="#portfolio">Portfolio</a></li>
-                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded"
-                            href="#about">About</a></li>
-                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded"
-                            href="#contact">Contact</a></li>
+                    @each('partials._menu_itens', $menuItens, 'item')
                 </ul>
             </div>
         </div>
