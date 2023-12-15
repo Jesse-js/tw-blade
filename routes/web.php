@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\SiteInheritanceController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -12,6 +13,12 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::get('/site/inheritance', [SiteInheritanceController::class, 'home'])->name('site.inheritance.home');
+Route::get('/site/inheritance/portfolio', [SiteInheritanceController::class, 'portfolio'])->name('site.inheritance.portfolio');
+Route::get('/site/inheritance/about', [SiteInheritanceController::class, 'about'])->name('site.inheritance.about');
+Route::get('/site/inheritance/contact', [SiteInheritanceController::class, 'contact'])->name('site.inheritance.contact');
+
 
 Route::get('/', function () {
     return view('index', [
