@@ -31,22 +31,7 @@
                 <i class="fas fa-bars"></i>
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
-                @php
-                    $menuItens = [
-                        [
-                            'label' => 'Portfolio',
-                            'url' => route('site.component.portfolio'),
-                        ],
-                        [
-                            'label' => 'About',
-                            'url' => route('site.component.about'),
-                        ],
-                        [
-                            'label' => 'Contact',
-                            'url' => route('site.component.contact'),
-                        ],
-                    ];
-                @endphp
+                
                 <ul class="navbar-nav ms-auto">
                     @each('partials._menu_itens', $menuItens, 'item')
                 </ul>
