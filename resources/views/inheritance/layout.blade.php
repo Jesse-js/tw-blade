@@ -31,22 +31,6 @@
                 <i class="fas fa-bars"></i>
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
-                @php
-                    $menuItens = [
-                        [
-                            'label' => 'Portfolio',
-                            'url' => route('site.inheritance.portfolio'),
-                        ],
-                        [
-                            'label' => 'About',
-                            'url' => route('site.inheritance.about'),
-                        ],
-                        [
-                            'label' => 'Contact',
-                            'url' => route('site.inheritance.contact'),
-                        ],
-                    ];
-                @endphp
                 <ul class="navbar-nav ms-auto">
                     @each('partials._menu_itens', $menuItens, 'item')
                 </ul>
@@ -103,11 +87,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Core theme JS-->
     <script src="js/scripts.js"></script>
-    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-    <!-- * *                               SB Forms JS                               * *-->
-    <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
-    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    @stack('contact_scripts')
 </body>
 
 </html>

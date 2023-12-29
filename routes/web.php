@@ -20,7 +20,7 @@ Route::get('/site/inheritance/portfolio', [SiteInheritanceController::class, 'po
 Route::get('/site/inheritance/about', [SiteInheritanceController::class, 'about'])->name('site.inheritance.about');
 Route::get('/site/inheritance/contact', [SiteInheritanceController::class, 'contact'])->name('site.inheritance.contact');
 
-Route::get('/site/component', [SiteComponentController::class, 'home'])->name('site.component.home');
+Route::get('/site/component/home/{lang?}', [SiteComponentController::class, 'home'])->name('site.component.home');
 Route::get('/site/component/portfolio', [SiteComponentController::class, 'portfolio'])->name('site.component.portfolio');
 Route::get('/site/component/about', [SiteComponentController::class, 'about'])->name('site.component.about');
 Route::get('/site/component/contact', [SiteComponentController::class, 'contact'])->name('site.component.contact');
