@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\SiteComponentController;
+use App\Http\Controllers\SiteInheritanceController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -12,6 +14,18 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::get('/site/inheritance', [SiteInheritanceController::class, 'home'])->name('site.inheritance.home');
+Route::get('/site/inheritance/portfolio', [SiteInheritanceController::class, 'portfolio'])->name('site.inheritance.portfolio');
+Route::get('/site/inheritance/about', [SiteInheritanceController::class, 'about'])->name('site.inheritance.about');
+Route::get('/site/inheritance/contact', [SiteInheritanceController::class, 'contact'])->name('site.inheritance.contact');
+
+Route::get('/site/component', [SiteComponentController::class, 'home'])->name('site.component.home');
+Route::get('/site/component/portfolio', [SiteComponentController::class, 'portfolio'])->name('site.component.portfolio');
+Route::get('/site/component/about', [SiteComponentController::class, 'about'])->name('site.component.about');
+Route::get('/site/component/contact', [SiteComponentController::class, 'contact'])->name('site.component.contact');
+
+
 
 Route::get('/', function () {
     return view('index', [
